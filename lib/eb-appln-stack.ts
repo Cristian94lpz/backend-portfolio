@@ -87,7 +87,7 @@ const optionSettingProperties: elasticbeanstalk.CfnEnvironment.OptionSettingProp
 const elbEnv = new elasticbeanstalk.CfnEnvironment(this, 'Environment', {
   environmentName: props?.envName ?? "MyWebAppEnvironment",
   applicationName: app.applicationName || appName,
-  solutionStackName: "64bit Amazon Linux 2015.03 v2.0.0 running Tomcat 8 Java 8",
+  solutionStackName: "64bit Amazon Linux 2 v4.3.9 running Tomcat 8.5 Corretto 11",
   optionSettings: optionSettingProperties,
   versionLabel: appVersionProps.ref,
 });
